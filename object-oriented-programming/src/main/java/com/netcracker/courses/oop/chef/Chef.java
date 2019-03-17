@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Chef {
 
-    public Salad createSalad(String name, ArrayList<Vegetable> recipe){
+    public Salad createSalad (String name, ArrayList<Vegetable> recipe){
 
         return new Salad(name,recipe);
     }

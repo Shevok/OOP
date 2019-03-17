@@ -3,13 +3,23 @@ package com.netcracker.courses.oop.typeofvegetable;
 public class Vegetable {
 
     private String name;
+    private String category;
     private int weight;
     private int calories;
 
-    public Vegetable(String name, int weight, int calories) {
+    public Vegetable(String name,String category, int weight, int calories) {
         this.name = name;
         this.weight = weight;
+        this.category = category;
         this.calories = calories;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getName() {

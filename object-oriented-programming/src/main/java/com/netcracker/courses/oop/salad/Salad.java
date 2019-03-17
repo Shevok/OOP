@@ -35,7 +35,7 @@ public class Salad {
     public int getCalories() {
         int result = 0;
         for (Vegetable vegetable : recipe) {
-            result += vegetable.getCalories();
+            result += vegetable.getCalories()*vegetable.getWeight()/100;
         }
         return result;
     }
