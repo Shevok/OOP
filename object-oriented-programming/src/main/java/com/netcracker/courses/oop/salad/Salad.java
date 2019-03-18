@@ -11,6 +11,9 @@ public class Salad {
     private ArrayList<Vegetable> recipe;
     private int calories;
 
+    public Salad() {
+    }
+
     public Salad(String name, ArrayList<Vegetable> recipe) {
         this.name = name;
         this.recipe = recipe;
