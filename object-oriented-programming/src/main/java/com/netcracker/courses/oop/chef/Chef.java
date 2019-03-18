@@ -1,7 +1,7 @@
 package com.netcracker.courses.oop.chef;
 
 import com.netcracker.courses.oop.salad.Salad;
-import com.netcracker.courses.oop.typeofvegetable.Vegetable;
+import com.netcracker.courses.oop.Vegetables.typeofvegetable.Vegetable;
 
 import java.util.ArrayList;
 

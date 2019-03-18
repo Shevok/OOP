@@ -1,6 +1,6 @@
 package com.netcracker.courses.oop.salad;
 
-import com.netcracker.courses.oop.typeofvegetable.Vegetable;
+import com.netcracker.courses.oop.Vegetables.typeofvegetable.Vegetable;
 
 import java.util.ArrayList;
 
