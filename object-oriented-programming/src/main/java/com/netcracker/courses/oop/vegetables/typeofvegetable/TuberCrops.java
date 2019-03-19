@@ -1,4 +1,4 @@
-package com.netcracker.courses.oop.Vegetables.typeofvegetable;
+package com.netcracker.courses.oop.vegetables.typeofvegetable;
 
 // клубнеплоды (картофель, батат, топинамбур)
 public abstract class TuberCrops extends Vegetable{

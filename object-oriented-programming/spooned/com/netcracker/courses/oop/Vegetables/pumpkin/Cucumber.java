@@ -1,9 +1,9 @@
-package com.netcracker.courses.oop.Vegetables.pumpkin;
+package com.netcracker.courses.oop.vegetables.pumpkin;
 
 
-public class Cucumber extends com.netcracker.courses.oop.Vegetables.typeofvegetable.Pumpkin {
-    public Cucumber(java.lang.String name, java.lang.String category, int weight, int calories) {
-        super("Огурец", "Pumpkin", weight, 67);
+public class Cucumber extends com.netcracker.courses.oop.vegetables.typeofvegetable.Pumpkin {
+    public Cucumber(int weight) {
+        super("Огурец", weight, 67);
     }
 }
 

@@ -1,4 +1,4 @@
-package com.netcracker.courses.oop.Vegetables.typeofvegetable;
+package com.netcracker.courses.oop.vegetables.typeofvegetable;
 
 //пряные (укроп, зелень петрушки, сельдерея, пастернака, чабер, эстрагон, базилик, мелисса и др.)
 public abstract class Spicy extends Vegetable {

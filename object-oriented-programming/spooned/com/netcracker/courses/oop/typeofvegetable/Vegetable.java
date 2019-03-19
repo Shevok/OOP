@@ -1,4 +1,4 @@
-package com.netcracker.courses.oop.Vegetables.roots.typeofvegetable;
+package com.netcracker.courses.oop.vegetables.roots.typeofvegetable;
 
 
 public class Vegetable {

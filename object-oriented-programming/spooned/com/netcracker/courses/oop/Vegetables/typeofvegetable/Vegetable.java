@@ -1,29 +1,20 @@
-package com.netcracker.courses.oop.Vegetables.typeofvegetable;
+package com.netcracker.courses.oop.vegetables.typeofvegetable;
 
 
-public class Vegetable {
+public abstract class Vegetable {
     private java.lang.String name;
-
-    private java.lang.String category;
 
     private int weight;
 
-    private int calories;
+    private java.lang.Integer calories;
 
-    public Vegetable(java.lang.String name, java.lang.String category, int weight, int calories) {
+    public Vegetable(java.lang.String name, int weight, int calories) {
         this.name = name;
         this.weight = weight;
-        this.category = category;
         this.calories = calories;
     }
 
-    public java.lang.String getCategory() {
-        return category;
-    }
-
-    public void setCategory(java.lang.String category) {
-        this.category = category;
-    }
+    public abstract com.netcracker.courses.oop.vegetables.typeofvegetable.VegetableCategory getCategory();
 
     public java.lang.String getName() {
         return name;

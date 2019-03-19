@@ -9,7 +9,21 @@ public class Output {
         java.lang.System.out.println("- 2 - приготовить салат");
         java.lang.System.out.println("- 3 - отсортировать ингридиенты в салате(по калорийности)");
         java.lang.System.out.println("- 4 - найти ингридиент по имени");
-        java.lang.System.out.println("- 5 - выход");
+        java.lang.System.out.println("- 5 - вывести калорийность салата");
+        java.lang.System.out.println("- 6 - выход");
+    }
+
+    public void printAllVegetables(java.util.ArrayList allVegetables) {
+        for (int i = 0; i < (allVegetables.size()); i++) {
+            java.lang.System.out.println(((("- " + i) + " - ") + (allVegetables.get(i))));
+        }
+    }
+
+    public void printSaladCondition(java.util.ArrayList<com.netcracker.courses.oop.vegetables.typeofvegetable.Vegetable> list) {
+        java.lang.System.out.println("Ваш салат состоит из следующих ингридиентов: ");
+        for (com.netcracker.courses.oop.vegetables.typeofvegetable.Vegetable vegetable : list) {
+            java.lang.System.out.println((((((((vegetable.getName()) + " Относится к классу ") + (vegetable.getCategory())) + " Количество калорий в 100г: ") + (vegetable.getCalories())) + " Вес: ") + (vegetable.getWeight())));
+        }
     }
 }
 

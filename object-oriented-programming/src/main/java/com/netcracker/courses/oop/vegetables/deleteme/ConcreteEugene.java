@@ -1,4 +1,4 @@
-package com.netcracker.courses.oop.Vegetables.deleteme;
+package com.netcracker.courses.oop.vegetables.deleteme;
 
 public class ConcreteEugene extends Eugene {
 

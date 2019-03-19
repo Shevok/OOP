@@ -1,7 +1,7 @@
 package com.netcracker.courses.oop.comparator;
 
 
-import com.netcracker.courses.oop.Vegetables.typeofvegetable.Vegetable;
+import com.netcracker.courses.oop.vegetables.typeofvegetable.Vegetable;
 
 import java.util.Comparator;
 

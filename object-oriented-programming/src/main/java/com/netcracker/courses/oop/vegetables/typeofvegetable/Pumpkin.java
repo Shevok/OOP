@@ -1,4 +1,4 @@
-package com.netcracker.courses.oop.Vegetables.typeofvegetable;
+package com.netcracker.courses.oop.vegetables.typeofvegetable;
 
 public abstract class Pumpkin extends Vegetable {
     public Pumpkin(String name, int weight, int calories) {

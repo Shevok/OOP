@@ -1,14 +1,14 @@
 package com.netcracker.courses.oop.chef;
 
-import com.netcracker.courses.oop.Vegetables.onion.Onion;
-import com.netcracker.courses.oop.Vegetables.pumpkin.Cucumber;
-import com.netcracker.courses.oop.Vegetables.roots.Carrot;
-import com.netcracker.courses.oop.Vegetables.spicy.Dill;
-import com.netcracker.courses.oop.Vegetables.tomatoes.Tomato;
-import com.netcracker.courses.oop.Vegetables.tubercrops.Potato;
+import com.netcracker.courses.oop.vegetables.onion.Onion;
+import com.netcracker.courses.oop.vegetables.pumpkin.Cucumber;
+import com.netcracker.courses.oop.vegetables.roots.Carrot;
+import com.netcracker.courses.oop.vegetables.spicy.Dill;
+import com.netcracker.courses.oop.vegetables.tomatoes.Tomato;
+import com.netcracker.courses.oop.vegetables.tubercrops.Potato;
 import com.netcracker.courses.oop.inputoutput.Input;
 import com.netcracker.courses.oop.inputoutput.Output;
-import com.netcracker.courses.oop.Vegetables.typeofvegetable.Vegetable;
+import com.netcracker.courses.oop.vegetables.typeofvegetable.Vegetable;
 
 import java.util.ArrayList;
 
@@ -31,7 +31,7 @@ public class Chef {
             System.out.println("Введите число + enter");
             menuPoint = input.inputInt();
 
-            while (!input.chechRightRange(menuPoint, MIN, max)){
+            while (!input.checkRightRange(menuPoint, MIN, max)){
                 System.out.println("Вы выбрали что-то не то,повторите ввод");
                 menuPoint = input.inputInt();
             }

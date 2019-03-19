@@ -1,9 +1,9 @@
-package com.netcracker.courses.oop.Vegetables.tubercrops;
+package com.netcracker.courses.oop.vegetables.tubercrops;
 
 
-public class Potato extends com.netcracker.courses.oop.Vegetables.typeofvegetable.TuberCrops {
+public class Potato extends com.netcracker.courses.oop.vegetables.typeofvegetable.TuberCrops {
     public Potato(int weight) {
-        super("Картофель", "Tuber crops", weight, 43);
+        super("Картофель", weight, 43);
     }
 }
 

@@ -1,6 +1,6 @@
-package com.netcracker.courses.oop.Vegetables.roots;
+package com.netcracker.courses.oop.vegetables.roots;
 
-import com.netcracker.courses.oop.Vegetables.typeofvegetable.Roots;
+import com.netcracker.courses.oop.vegetables.typeofvegetable.Roots;
 
 public class Carrot extends Roots {
     public Carrot(int weight) {

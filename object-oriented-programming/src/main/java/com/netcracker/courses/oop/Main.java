@@ -1,8 +1,13 @@
 package com.netcracker.courses.oop;
 
-import com.netcracker.courses.oop.Vegetables.onion.Onion;
-import com.netcracker.courses.oop.Vegetables.typeofvegetable.Onions;
-import com.netcracker.courses.oop.Vegetables.typeofvegetable.Vegetable;
+import com.netcracker.courses.oop.search.Search;
+import com.netcracker.courses.oop.vegetables.onion.Onion;
+import com.netcracker.courses.oop.vegetables.pumpkin.Cucumber;
+import com.netcracker.courses.oop.vegetables.roots.Carrot;
+import com.netcracker.courses.oop.vegetables.spicy.Dill;
+import com.netcracker.courses.oop.vegetables.tomatoes.Tomato;
+import com.netcracker.courses.oop.vegetables.tubercrops.Potato;
+import com.netcracker.courses.oop.vegetables.typeofvegetable.Vegetable;
 import com.netcracker.courses.oop.chef.Chef;
 import com.netcracker.courses.oop.comparator.CaloriesComparator;
 import com.netcracker.courses.oop.inputoutput.Input;
@@ -10,9 +15,6 @@ import com.netcracker.courses.oop.inputoutput.Output;
 import com.netcracker.courses.oop.salad.Salad;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Main {
 
@@ -27,16 +29,18 @@ public class Main {
         Input input = new Input();
         Output output = new Output();
         Chef chef = new Chef();
+        Search search = new Search();
 
-        ArrayList<String>  allVegetable = new ArrayList<>();
+        ArrayList<Vegetable>  allVegetable = new ArrayList<Vegetable>();
         ArrayList<Vegetable> recipe;
+        ArrayList<Vegetable> resultSearch;
 
-        allVegetable.add("Лук");
-        allVegetable.add("Огурец");
-        allVegetable.add("Морковь");
-        allVegetable.add("Укроп");
-        allVegetable.add("Помидор");
-        allVegetable.add("Картошка");
+        allVegetable.add(new Onion(0));
+        allVegetable.add(new Cucumber(0));
+        allVegetable.add(new Carrot(0));
+        allVegetable.add(new Dill(0));
+        allVegetable.add(new Tomato(0));
+        allVegetable.add(new Potato(0));
 
 
         while (flag){
@@ -67,6 +71,18 @@ public class Main {
                     }
                     break;
 
+                case 4:
+                    try {
+                        resultSearch = search.startSearch(salad.getRecipe());
+                        if(resultSearch.size() > 0){
+                            output.printAllVegetables(resultSearch);
+                        }else {
+                            System.out.println("Ничего не найдено!");
+                        }
+                    }catch (NullPointerException e){
+                        System.out.println("Салат еще не создан!");
+                    }
+                    break;
                 case 5:
                     try {
                         output.printSaladCondition(salad.getRecipe());

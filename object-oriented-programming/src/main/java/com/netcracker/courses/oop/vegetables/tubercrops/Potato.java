@@ -1,6 +1,6 @@
-package com.netcracker.courses.oop.Vegetables.tubercrops;
+package com.netcracker.courses.oop.vegetables.tubercrops;
 
-import com.netcracker.courses.oop.Vegetables.typeofvegetable.TuberCrops;
+import com.netcracker.courses.oop.vegetables.typeofvegetable.TuberCrops;
 
 public class Potato extends TuberCrops {
 

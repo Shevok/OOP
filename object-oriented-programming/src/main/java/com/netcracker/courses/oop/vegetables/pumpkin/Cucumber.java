@@ -1,6 +1,6 @@
-package com.netcracker.courses.oop.Vegetables.pumpkin;
+package com.netcracker.courses.oop.vegetables.pumpkin;
 
-import com.netcracker.courses.oop.Vegetables.typeofvegetable.Pumpkin;
+import com.netcracker.courses.oop.vegetables.typeofvegetable.Pumpkin;
 
 public class Cucumber extends Pumpkin {
     public Cucumber(int weight) {

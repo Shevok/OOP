@@ -1,9 +1,9 @@
-package com.netcracker.courses.oop.Vegetables.roots;
+package com.netcracker.courses.oop.vegetables.roots;
 
 
-public class Carrot extends com.netcracker.courses.oop.Vegetables.typeofvegetable.Roots {
+public class Carrot extends com.netcracker.courses.oop.vegetables.typeofvegetable.Roots {
     public Carrot(int weight) {
-        super("Морковь", "Roots", weight, 53);
+        super("Морковь", weight, 53);
     }
 }
 
