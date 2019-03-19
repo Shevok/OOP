@@ -8,23 +8,22 @@ import com.netcracker.courses.oop.Vegetables.tomatoes.Tomato;
 import com.netcracker.courses.oop.Vegetables.tubercrops.Potato;
 import com.netcracker.courses.oop.inputoutput.Input;
 import com.netcracker.courses.oop.inputoutput.Output;
-import com.netcracker.courses.oop.salad.Salad;
 import com.netcracker.courses.oop.Vegetables.typeofvegetable.Vegetable;
 
 import java.util.ArrayList;
 
 public class Chef {
 
-    public ArrayList<Vegetable> addIngredients(ArrayList allVegetable){
+    public ArrayList<Vegetable> createRecipe(ArrayList allVegetable){
 
         final int MIN = 0;
         boolean flag = true;
-        int max = allVegetable.size()+1;
+        int max = allVegetable.size();
         int menuPoint ;
         Input input = new Input();
         Output output = new Output();
 
-        ArrayList<Vegetable> listWithIngredients = new ArrayList<Vegetable>();
+        ArrayList<Vegetable> recipe = new ArrayList<>();
 
         while (flag) {
             output.printAllVegetables(allVegetable);
@@ -37,48 +36,33 @@ public class Chef {
                 menuPoint = input.inputInt();
             }
 
+            if(menuPoint<allVegetable.size()) System.out.println("Сколько грамм добавлять?");
+
             switch (menuPoint) {
-                case 0:{
-                    System.out.println("Сколько грамм добавлять?");
-                    Vegetable vegetable = new Onion(input.inputInt());
-                    listWithIngredients.add(vegetable);
-                }
+                case 0:
+                    recipe.add(new Onion(input.inputInt()));
                     break;
-                case 1:{
-                    System.out.println("Сколько грамм добавлять?");
-                    Vegetable vegetable = new Cucumber(input.inputInt());
-                    listWithIngredients.add(vegetable);
-                }
+                case 1:
+                    recipe.add(new Cucumber(input.inputInt()));
                     break;
-                case 2:{
-                    System.out.println("Сколько грамм добавлять?");
-                    Vegetable vegetable = new Carrot(input.inputInt());
-                    listWithIngredients.add(vegetable);
-                }
+                case 2:
+                    recipe.add(new Carrot(input.inputInt()));
                     break;
-                case 3:{
-                    System.out.println("Сколько грамм добавлять?");
-                    Vegetable vegetable = new Dill(input.inputInt());
-                    listWithIngredients.add(vegetable);
-                }
+                case 3:
+                    recipe.add(new Dill(input.inputInt()));
                     break;
-                case 4:{
-                    System.out.println("Сколько грамм добавлять?");
-                    Vegetable vegetable = new Tomato(input.inputInt());
-                    listWithIngredients.add(vegetable);
-                }
+                case 4:
+                    recipe.add(new Tomato(input.inputInt()));
                     break;
-                case 5:{
-                    System.out.println("Сколько грамм добавлять?");
-                    Vegetable vegetable = new Potato(input.inputInt());
-                    listWithIngredients.add(vegetable);
-                }
+                case 5:
+                    recipe.add(new Potato(input.inputInt()));
                     break;
                 case 6:
                     flag = false;
                     break;
             }
         }
-        return listWithIngredients;
+        return recipe;
     }
+
 }
