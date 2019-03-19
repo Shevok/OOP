@@ -10,6 +10,7 @@ import com.netcracker.courses.oop.inputoutput.Output;
 import com.netcracker.courses.oop.salad.Salad;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,7 +29,7 @@ public class Main {
         Chef chef = new Chef();
 
         ArrayList<String>  allVegetable = new ArrayList<>();
-        ArrayList<Vegetable> ingredientsList;
+        ArrayList<Vegetable> recipe;
 
         allVegetable.add("Лук");
         allVegetable.add("Огурец");
@@ -53,17 +54,17 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Выберите ингридиент для салата");
-                    ingredientsList = chef.createRecipe(allVegetable);
+                    recipe = chef.createRecipe(allVegetable);
                     String nameOfSalad = input.inputString();
-                    salad = new  Salad(nameOfSalad, ingredientsList);
+                    salad = new  Salad(nameOfSalad, recipe);
                     break;
                 case 3:
-                    List<Vegetable> sortedIngredients = salad.getRecipe()
-                            .stream()
-                            .sorted(new CaloriesComparator())
-                            .collect(Collectors.toList());
-                    System.out.println();
-                    sortedIngredients.forEach(System.out::println);
+                    try {
+                        salad.getRecipe().sort(new CaloriesComparator());
+                        output.printSaladCondition(salad.getRecipe());
+                    }catch (NullPointerException e){
+                        System.out.println("Салат еще не создан!");
+                    }
                     break;
 
                 case 5:
