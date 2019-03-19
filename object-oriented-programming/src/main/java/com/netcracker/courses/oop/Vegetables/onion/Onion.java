@@ -4,6 +4,6 @@ import com.netcracker.courses.oop.Vegetables.typeofvegetable.Onions;
 
 public class Onion extends Onions {
     public Onion(int weight) {
-        super("Лук", "Onions", weight, 32);
+        super("Лук", weight, 32);
     }
 }
