@@ -43,7 +43,7 @@ public class Main {
             output.printMainMenu();
             menuPoint = input.inputInt();
 
-            while (!input.chechRightRange(menuPoint, MIN, MAX)){
+            while (!input.checkRightRange(menuPoint, MIN, MAX)){
                 System.out.println("Вы выбрали что-то не то,повторите ввод");
                 menuPoint = input.inputInt();
             }

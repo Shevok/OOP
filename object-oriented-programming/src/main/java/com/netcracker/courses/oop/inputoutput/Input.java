@@ -24,7 +24,7 @@ public class Input {
     }
 
 
-    public boolean chechRightRange(int temp, int min, int max){
-        return (temp >= min && temp < max);
+    public boolean checkRightRange(int temp, int min, int max){
+        return (temp >= min && temp <= max);
     }
 }
