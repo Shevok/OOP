@@ -13,9 +13,9 @@ public class Output {
         java.lang.System.out.println("- 6 - выход");
     }
 
-    public void printAllVegetables(java.util.ArrayList allVegetables) {
-        for (int i = 0; i < (allVegetables.size()); i++) {
-            java.lang.System.out.println(((("- " + i) + " - ") + (allVegetables.get(i))));
+    public void printAllVegetables(java.util.ArrayList<com.netcracker.courses.oop.vegetables.typeofvegetable.Vegetable> list) {
+        for (com.netcracker.courses.oop.vegetables.typeofvegetable.Vegetable vegetable : list) {
+            java.lang.System.out.println(((((((("- " + (list.indexOf(vegetable))) + " - ") + (vegetable.getName())) + " Относится к классу ") + (vegetable.getCategory())) + " Количество калорий в 100г: ") + (vegetable.getCalories())));
         }
     }
 
@@ -24,6 +24,15 @@ public class Output {
         for (com.netcracker.courses.oop.vegetables.typeofvegetable.Vegetable vegetable : list) {
             java.lang.System.out.println((((((((vegetable.getName()) + " Относится к классу ") + (vegetable.getCategory())) + " Количество калорий в 100г: ") + (vegetable.getCalories())) + " Вес: ") + (vegetable.getWeight())));
         }
+    }
+
+    public void printSearchChoice() {
+        java.lang.System.out.println("Вам доступен поиск по одному из следующих параметров овощей : ");
+        java.lang.System.out.println("- 1 - Имя");
+        java.lang.System.out.println("- 2 - Калорийность");
+        java.lang.System.out.println("- 3 - Вес");
+        java.lang.System.out.println("- 4 - Имя + Вес");
+        java.lang.System.out.println("- 5 - Выход");
     }
 }
 
