@@ -4,16 +4,18 @@ import com.netcracker.courses.oop.Vegetables.onion.Onion;
 import com.netcracker.courses.oop.Vegetables.typeofvegetable.Onions;
 import com.netcracker.courses.oop.Vegetables.typeofvegetable.Vegetable;
 import com.netcracker.courses.oop.chef.Chef;
+import com.netcracker.courses.oop.comparator.CaloriesComparator;
 import com.netcracker.courses.oop.inputoutput.Input;
 import com.netcracker.courses.oop.inputoutput.Output;
 import com.netcracker.courses.oop.salad.Salad;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
-    public static Salad salad;
+    private static Salad salad;
 
     public static void main(String[] args) {
 
@@ -25,8 +27,8 @@ public class Main {
         Output output = new Output();
         Chef chef = new Chef();
 
-        ArrayList<String>  allVegetable = new ArrayList<String>();
-        ArrayList<Vegetable> ingredientsList = new ArrayList<Vegetable>();
+        ArrayList<String>  allVegetable = new ArrayList<>();
+        ArrayList<Vegetable> ingredientsList;
 
         allVegetable.add("Лук");
         allVegetable.add("Огурец");
@@ -50,18 +52,35 @@ public class Main {
                     output.printAllVegetables(allVegetable);
                     break;
                 case 2:
-                     ingredientsList = chef.addIngredients(allVegetable);
-                     String nameOfSalad = input.inputString();
-                    salad = new  Salad(nameOfSalad,ingredientsList);
+                    System.out.println("Выберите ингридиент для салата");
+                    ingredientsList = chef.createRecipe(allVegetable);
+                    String nameOfSalad = input.inputString();
+                    salad = new  Salad(nameOfSalad, ingredientsList);
                     break;
+                case 3:
+                    List<Vegetable> sortedIngredients = salad.getRecipe()
+                            .stream()
+                            .sorted(new CaloriesComparator())
+                            .collect(Collectors.toList());
+                    System.out.println();
+                    sortedIngredients.forEach(System.out::println);
+                    break;
+
                 case 5:
+                    try {
+                        output.printSaladCondition(salad.getRecipe());
+                        System.out.println("Общее количество калорий в салате: " + salad.getCalories());
+                    }catch (NullPointerException e){
+                        System.out.println("Вы еще не создали салат");
+                    }
+                    break;
+
+                case 6:
                     flag = false;
                     break;
             }
 
         }
 
-        ArrayList<Vegetable> list1 = salad.getRecipe();
-        System.out.println(list1.get(0));
     }
 }

@@ -1,26 +1,19 @@
 package com.netcracker.courses.oop.Vegetables.typeofvegetable;
 
-public class Vegetable {
+public abstract class Vegetable  {
 
     private String name;
-    private String category;
     private int weight;
-    private int calories;
+    private Integer calories;
 
-    public Vegetable(String name,String category, int weight, int calories) {
+    public Vegetable(String name, int weight, int calories) {
         this.name = name;
         this.weight = weight;
-        this.category = category;
         this.calories = calories;
     }
 
-    public String getCategory() {
-        return category;
-    }
+    public abstract VegetableCategory getCategory();
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
 
     public String getName() {
         return name;
@@ -45,4 +38,5 @@ public class Vegetable {
     public void setCalories(int calories) {
         this.calories = calories;
     }
+
 }
